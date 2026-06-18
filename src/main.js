@@ -9,3 +9,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Simple sparkle effect toggle or animation logic if needed
     // The current CSS already handles basic bounce animation
 });
+// Re-adding a comment to trigger a PR
