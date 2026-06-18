@@ -1,9 +1,12 @@
 :root {
     --pink-primary: #FFD1DC;
-    --pink-hot: #FF69B4;
-    --purple-soft: #E6E6FA;
-    --white-transparent: rgba(255, 255, 255, 0.8);
-    --text-color: #5D4A5B;
+    --pink-hot: #FF1493; /* Hotter pink */
+    --pink-neon: #FF69B4;
+    --dark-bg: #1a1a2e;
+    --darker-bg: #16213e;
+    --card-bg: rgba(26, 26, 46, 0.9);
+    --text-white: #ffffff;
+    --text-pink: #FFC0CB;
     --accent-gold: #FFD700;
     --font-main: 'Fredoka', sans-serif;
     --font-accent: 'Dancing Script', cursive;
@@ -17,9 +20,9 @@
 
 body {
     font-family: var(--font-main);
-    background: linear-gradient(160deg, #fff5f8 0%, #f3e5f5 50%, #fff5f8 100%);
+    background: linear-gradient(160deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
     background-attachment: fixed;
-    color: var(--text-color);
+    color: var(--text-white);
     line-height: 1.6;
     display: flex;
     justify-content: center;
@@ -30,24 +33,25 @@ body {
 #app {
     width: 100%;
     max-width: 480px;
-    background: var(--white-transparent);
-    backdrop-filter: blur(12px);
-    border-radius: 50px;
+    background: var(--card-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 40px;
     padding: 40px 20px;
-    box-shadow: 0 15px 40px rgba(255, 182, 193, 0.3);
-    border: 3px solid #ffffff;
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
+    border: 2px solid var(--pink-hot);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 /* Decorative Motifs */
 #app::before {
-    content: '💖';
+    content: '🖤';
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 20px;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 #app::after {
@@ -56,7 +60,7 @@ body {
     bottom: 20px;
     right: 20px;
     font-size: 20px;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
 /* Hero Section */
@@ -75,8 +79,8 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 6px solid #fff;
-    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+    border: 4px solid var(--pink-hot);
+    box-shadow: 0 0 20px var(--pink-hot);
     position: relative;
     z-index: 2;
 }
@@ -86,13 +90,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 220px;
-    height: 120px;
-    background-image: url('https://img.icons8.com/ios/100/ff69b4/angel-wings.png'); /* Placeholder icon for wings */
+    width: 240px;
+    height: 140px;
+    background-image: url('https://img.icons8.com/ios/100/ff1493/angel-wings.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: 1;
 }
 
@@ -100,6 +104,8 @@ body {
     content: '✨';
     position: absolute;
     font-size: 24px;
+    color: var(--pink-neon);
+    text-shadow: 0 0 10px var(--pink-hot);
     animation: floating 3s infinite ease-in-out;
     z-index: 3;
 }
@@ -109,35 +115,37 @@ body {
 
 h1 {
     font-family: var(--font-accent);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--pink-hot);
     margin-bottom: 5px;
-    text-shadow: 1px 1px 0px #fff;
+    text-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
 }
 
 .brand-accent {
-    color: #b19cd9; /* Soft purple */
+    color: var(--text-white);
 }
 
 .handle {
     font-weight: 600;
-    color: #d8bfd8;
+    color: var(--pink-neon);
     margin-bottom: 20px;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
 }
 
 /* About Section */
 .about-section {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
     border-radius: 20px;
     margin: 0 10px 20px;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255, 105, 180, 0.2);
 }
 
 .bio {
     font-size: 1rem;
-    color: #7d6b7d;
+    color: var(--text-pink);
+    font-weight: 300;
 }
 
 /* Links Section */
@@ -146,22 +154,23 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background: linear-gradient(to right, var(--pink-hot), #ff8da1);
+    background: linear-gradient(45deg, var(--pink-hot), #ff4da6);
     color: white;
     text-decoration: none;
     padding: 20px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 25px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
+    border: none;
 }
 
 .cta-button:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.7);
+    filter: brightness(1.1);
 }
 
 .social-grid {
@@ -172,14 +181,14 @@ h1 {
 }
 
 .social-link {
-    background: white;
-    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
     text-decoration: none;
     padding: 14px;
     border-radius: 18px;
     font-size: 0.9rem;
     font-weight: 500;
-    border: 1px solid var(--purple-soft);
+    border: 1px solid rgba(255, 105, 180, 0.3);
     transition: all 0.2s;
     display: flex;
     align-items: center;
@@ -187,9 +196,9 @@ h1 {
 }
 
 .social-link:hover {
-    background: var(--pink-primary);
+    background: rgba(255, 20, 147, 0.2);
     border-color: var(--pink-hot);
-    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
 }
 
 /* Sections Styling */
@@ -200,14 +209,16 @@ h1 {
 h2 {
     color: var(--pink-hot);
     margin-bottom: 15px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: var(--font-accent);
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
 }
 
 .subtitle {
     font-size: 0.85rem;
-    color: #a08ba0;
+    color: var(--text-pink);
     margin-bottom: 20px;
+    opacity: 0.8;
 }
 
 /* Tributes */
@@ -218,17 +229,27 @@ h2 {
 }
 
 .tribute-card {
-    background: white;
+    background: rgba(0, 0, 0, 0.3);
     padding: 15px 5px;
     border-radius: 20px;
-    border: 2px dashed var(--pink-primary);
+    border: 1px solid rgba(255, 105, 180, 0.4);
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: var(--text-white);
+    transition: all 0.3s;
+}
+
+.tribute-card:hover {
+    background: rgba(255, 20, 147, 0.2);
+    border-color: var(--pink-hot);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
 }
 
 .amount {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--pink-hot);
 }
@@ -236,16 +257,9 @@ h2 {
 .label {
     font-size: 0.65rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     margin: 4px 0;
-}
-
-.status {
-    font-size: 0.6rem;
-    background: #f0f0f0;
-    padding: 2px 6px;
-    border-radius: 10px;
-    color: #999;
+    color: var(--text-pink);
 }
 
 /* Bundles */
@@ -256,17 +270,18 @@ h2 {
 }
 
 .bundle-card {
-    background: white;
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
     border-radius: 30px;
     position: relative;
-    border: 1.5px solid var(--purple-soft);
+    border: 1px solid rgba(255, 105, 180, 0.2);
     text-align: left;
 }
 
 .bundle-card.highlight {
     border: 2px solid var(--pink-hot);
-    background: linear-gradient(to bottom right, #ffffff, #fff0f5);
+    background: rgba(255, 20, 147, 0.1);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.2);
 }
 
 .badge {
@@ -279,30 +294,39 @@ h2 {
     padding: 5px 12px;
     border-radius: 12px;
     font-weight: 600;
-    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    box-shadow: 0 0 10px var(--pink-hot);
 }
 
 .bundle-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 8px;
-    color: var(--pink-hot);
+    color: var(--text-white);
 }
 
 .bundle-card p {
-    font-size: 0.85rem;
-    color: #777;
-    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-pink);
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
-.buy-button-placeholder {
+.buy-button {
+    display: inline-block;
     width: 100%;
-    background: #f8f8f8;
-    color: #bbb;
-    border: 1px solid #eee;
-    padding: 10px;
+    background: var(--pink-hot);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
     border-radius: 15px;
-    font-size: 0.9rem;
-    cursor: default;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.buy-button:hover {
+    background: #ff4da6;
+    box-shadow: 0 0 20px var(--pink-hot);
 }
 
 /* Contact */
@@ -313,24 +337,31 @@ h2 {
     font-size: 1.1rem;
     display: inline-block;
     margin-top: 10px;
-    border-bottom: 2px solid var(--pink-primary);
+    border-bottom: 2px solid rgba(255, 20, 147, 0.3);
+    transition: all 0.3s;
+}
+
+.contact-email:hover {
+    color: var(--pink-neon);
+    border-bottom-color: var(--pink-hot);
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
 }
 
 footer {
     margin-top: 50px;
     padding-top: 20px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 footer p {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #d8bfd8;
+    color: var(--pink-neon);
 }
 
 .disclaimer {
     font-size: 0.7rem;
-    color: #bbb;
+    color: rgba(255, 255, 255, 0.5);
     margin-top: 10px;
     font-weight: 400;
 }
