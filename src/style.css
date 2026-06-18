@@ -1,13 +1,13 @@
 :root {
-    --pink-primary: #FFD1DC;
-    --pink-hot: #FF1493; /* Hotter pink */
+    --pink-hot: #FF1493;
+    --pink-deep: #C71585;
     --pink-neon: #FF69B4;
-    --dark-bg: #1a1a2e;
-    --darker-bg: #16213e;
-    --card-bg: rgba(26, 26, 46, 0.9);
+    --dark-bg: #050505;
+    --darker-bg: #000000;
+    --card-bg: rgba(15, 15, 15, 0.95);
     --text-white: #ffffff;
-    --text-pink: #FFC0CB;
-    --accent-gold: #FFD700;
+    --text-pink: #FFD1DC;
+    --glow-pink: 0 0 15px rgba(255, 20, 147, 0.6);
     --font-main: 'Fredoka', sans-serif;
     --font-accent: 'Dancing Script', cursive;
 }
@@ -20,7 +20,7 @@
 
 body {
     font-family: var(--font-main);
-    background: linear-gradient(160deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: linear-gradient(135deg, #050505 0%, #1a0b12 100%);
     background-attachment: fixed;
     color: var(--text-white);
     line-height: 1.6;
@@ -34,33 +34,35 @@ body {
     width: 100%;
     max-width: 480px;
     background: var(--card-bg);
-    backdrop-filter: blur(15px);
-    border-radius: 40px;
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
     padding: 40px 20px;
-    box-shadow: 0 0 30px rgba(255, 20, 147, 0.3);
-    border: 2px solid var(--pink-hot);
+    box-shadow: 0 0 40px rgba(255, 20, 147, 0.2);
+    border: 1px solid rgba(255, 20, 147, 0.3);
     position: relative;
     overflow: hidden;
     text-align: center;
 }
 
-/* Decorative Motifs */
+/* Seductive Motifs */
 #app::before {
     content: '🖤';
     position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 20px;
-    opacity: 0.6;
+    top: 25px;
+    left: 25px;
+    font-size: 24px;
+    opacity: 0.4;
+    filter: drop-shadow(var(--glow-pink));
 }
 
 #app::after {
-    content: '✨';
+    content: '👼';
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    font-size: 20px;
-    opacity: 0.6;
+    bottom: 25px;
+    right: 25px;
+    font-size: 24px;
+    opacity: 0.4;
+    filter: drop-shadow(var(--glow-pink));
 }
 
 /* Hero Section */
@@ -70,19 +72,20 @@ body {
 
 .profile-container {
     position: relative;
-    width: 140px;
-    height: 140px;
-    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 25px;
 }
 
 .profile-pic {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    border: 4px solid var(--pink-hot);
-    box-shadow: 0 0 20px var(--pink-hot);
+    border: 3px solid var(--pink-hot);
+    box-shadow: var(--glow-pink);
     position: relative;
     z-index: 2;
+    object-fit: cover;
 }
 
 .angel-wings {
@@ -90,35 +93,36 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 240px;
-    height: 140px;
+    width: 260px;
+    height: 160px;
     background-image: url('https://img.icons8.com/ios/100/ff1493/angel-wings.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.4;
+    opacity: 0.3;
     z-index: 1;
+    filter: drop-shadow(var(--glow-pink));
 }
 
 .sparkles::before, .sparkles::after {
     content: '✨';
     position: absolute;
-    font-size: 24px;
+    font-size: 28px;
     color: var(--pink-neon);
-    text-shadow: 0 0 10px var(--pink-hot);
-    animation: floating 3s infinite ease-in-out;
+    text-shadow: var(--glow-pink);
+    animation: floating 4s infinite ease-in-out;
     z-index: 3;
 }
 
-.sparkles::before { top: -10px; left: -20px; }
-.sparkles::after { bottom: 10px; right: -20px; animation-delay: 1.5s; }
+.sparkles::before { top: -15px; left: -30px; }
+.sparkles::after { bottom: 15px; right: -30px; animation-delay: 2s; }
 
 h1 {
     font-family: var(--font-accent);
-    font-size: 2.4rem;
+    font-size: 2.6rem;
     color: var(--pink-hot);
     margin-bottom: 5px;
-    text-shadow: 0 0 15px rgba(255, 20, 147, 0.5);
+    text-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
 }
 
 .brand-accent {
@@ -128,24 +132,26 @@ h1 {
 .handle {
     font-weight: 600;
     color: var(--pink-neon);
-    margin-bottom: 20px;
-    font-size: 1rem;
-    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* About Section */
 .about-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 20px;
+    background: rgba(255, 20, 147, 0.05);
+    padding: 25px;
     border-radius: 20px;
-    margin: 0 10px 20px;
-    border: 1px solid rgba(255, 105, 180, 0.2);
+    margin: 0 10px 30px;
+    border: 1px solid rgba(255, 20, 147, 0.2);
 }
 
 .bio {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-pink);
     font-weight: 300;
+    font-style: italic;
 }
 
 /* Links Section */
@@ -153,86 +159,84 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: linear-gradient(45deg, var(--pink-hot), #ff4da6);
+    gap: 12px;
+    background: linear-gradient(45deg, #000, var(--pink-deep));
     color: white;
     text-decoration: none;
-    padding: 20px;
-    border-radius: 30px;
-    font-size: 1.1rem;
+    padding: 22px;
+    border-radius: 50px;
+    font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 25px;
-    transition: all 0.3s;
-    box-shadow: 0 5px 20px rgba(255, 20, 147, 0.4);
-    border: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 20, 147, 0.3);
+    border: 1px solid var(--pink-hot);
 }
 
 .cta-button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(255, 20, 147, 0.7);
-    filter: brightness(1.1);
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.5);
+    background: linear-gradient(45deg, var(--pink-deep), var(--pink-hot));
 }
 
 .social-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 15px;
     margin-bottom: 40px;
 }
 
 .social-link {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
     color: var(--text-white);
     text-decoration: none;
-    padding: 14px;
-    border-radius: 18px;
-    font-size: 0.9rem;
+    padding: 16px;
+    border-radius: 15px;
+    font-size: 0.95rem;
     font-weight: 500;
-    border: 1px solid rgba(255, 105, 180, 0.3);
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 1px solid rgba(255, 20, 147, 0.2);
+    transition: all 0.3s;
 }
 
 .social-link:hover {
-    background: rgba(255, 20, 147, 0.2);
+    background: rgba(255, 20, 147, 0.15);
     border-color: var(--pink-hot);
-    box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);
+    box-shadow: var(--glow-pink);
 }
 
 /* Sections Styling */
 .content-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 h2 {
     color: var(--pink-hot);
-    margin-bottom: 15px;
-    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
     font-family: var(--font-accent);
-    text-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.4);
 }
 
 .subtitle {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-pink);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     opacity: 0.8;
+    letter-spacing: 1px;
 }
 
 /* Tributes */
 .tribute-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .tribute-card {
-    background: rgba(0, 0, 0, 0.3);
-    padding: 15px 5px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 105, 180, 0.4);
+    background: #000;
+    padding: 20px 10px;
+    border-radius: 15px;
+    border: 1px dashed rgba(255, 20, 147, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,138 +246,159 @@ h2 {
 }
 
 .tribute-card:hover {
-    background: rgba(255, 20, 147, 0.2);
-    border-color: var(--pink-hot);
+    background: rgba(255, 20, 147, 0.1);
+    border: 1px solid var(--pink-hot);
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+    box-shadow: var(--glow-pink);
 }
 
 .amount {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--pink-hot);
+    margin-bottom: 5px;
 }
 
 .label {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 4px 0;
+    letter-spacing: 1.5px;
     color: var(--text-pink);
+    opacity: 0.9;
 }
 
 /* Bundles */
 .bundle-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .bundle-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 30px;
+    background: rgba(20, 20, 20, 0.8);
+    padding: 30px;
+    border-radius: 25px;
     position: relative;
-    border: 1px solid rgba(255, 105, 180, 0.2);
+    border: 1px solid rgba(255, 20, 147, 0.15);
     text-align: left;
+    transition: all 0.3s;
+}
+
+.bundle-card:hover {
+    border-color: rgba(255, 20, 147, 0.4);
+    background: rgba(25, 25, 25, 0.9);
 }
 
 .bundle-card.highlight {
-    border: 2px solid var(--pink-hot);
-    background: rgba(255, 20, 147, 0.1);
-    box-shadow: 0 0 20px rgba(255, 20, 147, 0.2);
+    border: 1px solid var(--pink-hot);
+    background: rgba(255, 20, 147, 0.05);
+    box-shadow: inset 0 0 20px rgba(255, 20, 147, 0.1);
 }
 
 .badge {
     position: absolute;
-    top: -10px;
-    right: 15px;
+    top: -12px;
+    right: 20px;
     background: var(--pink-hot);
     color: white;
-    font-size: 0.7rem;
-    padding: 5px 12px;
-    border-radius: 12px;
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 50px;
     font-weight: 600;
-    box-shadow: 0 0 10px var(--pink-hot);
+    box-shadow: var(--glow-pink);
+    text-transform: uppercase;
 }
 
 .bundle-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
     color: var(--text-white);
+    letter-spacing: 0.5px;
 }
 
 .bundle-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text-pink);
-    margin-bottom: 20px;
-    opacity: 0.9;
+    margin-bottom: 25px;
+    opacity: 0.85;
 }
 
 .buy-button {
     display: inline-block;
     width: 100%;
-    background: var(--pink-hot);
-    color: white;
+    background: transparent;
+    color: var(--pink-hot);
     text-decoration: none;
-    padding: 12px;
-    border-radius: 15px;
+    padding: 14px;
+    border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
     transition: all 0.3s;
+    border: 1px solid var(--pink-hot);
 }
 
 .buy-button:hover {
-    background: #ff4da6;
-    box-shadow: 0 0 20px var(--pink-hot);
+    background: var(--pink-hot);
+    color: white;
+    box-shadow: var(--glow-pink);
 }
 
 /* Contact */
+.contact-section {
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    border: 1px solid rgba(255, 20, 147, 0.1);
+}
+
 .contact-email {
     color: var(--pink-hot);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     display: inline-block;
-    margin-top: 10px;
-    border-bottom: 2px solid rgba(255, 20, 147, 0.3);
+    margin-top: 15px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 20, 147, 0.3);
     transition: all 0.3s;
 }
 
 .contact-email:hover {
     color: var(--pink-neon);
     border-bottom-color: var(--pink-hot);
-    text-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+    text-shadow: var(--glow-pink);
 }
 
 footer {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 20, 147, 0.2);
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--pink-neon);
+    letter-spacing: 1px;
 }
 
 .disclaimer {
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 10px;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 12px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 /* Animations */
 @keyframes floating {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-15px); }
 }
 
 /* Mobile Tweaks */
-@media (max-width: 380px) {
+@media (max-width: 400px) {
     .tribute-grid {
         grid-template-columns: 1fr;
     }
