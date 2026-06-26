@@ -7,121 +7,119 @@
     <link rel="stylesheet" href="/src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="top-nav">
-        <div class="nav-container">
-            <a href="#" class="brand-logo">Arch Angels</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#content">Content</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <div class="container nav-container">
+            <a href="#" class="logo">ARCH ANGELS</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#content">Content</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
             <div class="nav-cta">
-                <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="nav-button">Join Now</a>
+                <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="btn btn-pink btn-sm">JOIN NOW</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section">
-        <div class="hero-content">
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
             <div class="hero-text">
-                <span class="hero-badge">Exclusive Access</span>
-                <h1>Divine Arches, <br><span class="accent-text">Seductive Style.</span></h1>
-                <p>Welcome to the ultimate destination for premium foot and leg appreciation. High-quality visuals, personal touch, and consistent updates.</p>
-                <div class="hero-actions">
-                    <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="primary-btn">Explore Content</a>
-                    <a href="#content" class="secondary-btn">View Bundles</a>
+                <span class="badge">EXCLUSIVE ACCESS</span>
+                <h1>Divine Arches, <span class="text-pink">Seductive Style</span></h1>
+                <p>Welcome to the official home of Ash Avery's Arch Angels. High-quality visuals, curated collections, and a personal touch for the connoisseur.</p>
+                <div class="hero-btns">
+                    <a href="#content" class="btn btn-pink">EXPLORE CONTENT</a>
+                    <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="btn btn-outline">FEETFINDER</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="https://placehold.co/600x800/1a1a1a/ff1493?text=Ash+Avery" alt="Ash Avery">
-                    <div class="image-overlay"></div>
+            <div class="hero-visual">
+                <div class="plaid-card">
+                    <img src="https://placehold.co/400x600/1a1a1a/ff1493?text=Ash+Avery" alt="Ash Avery" class="hero-img">
+                    <div class="ribbon"></div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-info">
-                    <h2 class="section-title">The Angel Behind the Arches</h2>
-                    <p>I'm Ash Avery, and I've created Arch Angels as a sanctuary for those who appreciate the beauty of feet and legs. With a blend of sensual school girl aesthetics and high-fashion vibes, I bring you curated content that you won't find anywhere else.</p>
-                    <div class="stats-row">
-                        <div class="stat-item">
-                            <span class="stat-num">500+</span>
-                            <span class="stat-label">Photos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">50+</span>
-                            <span class="stat-label">Videos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">Daily</span>
-                            <span class="stat-label">Updates</span>
-                        </div>
-                    </div>
+    <section id="about" class="section about-section">
+        <div class="container grid grid-2">
+            <div class="about-visual">
+                <div class="image-stack">
+                    <div class="image-placeholder main-img"></div>
+                    <div class="image-placeholder accent-img"></div>
                 </div>
-                <div class="about-motif">
-                    <div class="plaid-box">
-                        <div class="ribbon-bow"></div>
-                    </div>
-                </div>
+            </div>
+            <div class="about-text">
+                <h2 class="section-title">The Angel Behind <span class="text-pink">The Arches</span></h2>
+                <p>I'm Ash Avery, and I've created Arch Angels as a sanctuary for those who appreciate the finer details of foot and leg aesthetics. My style blends classic school girl charm with a sophisticated, sensual edge.</p>
+                <p>From high-definition photo sets to exclusive custom videos, everything here is curated to provide the highest quality experience for my fans.</p>
+                <ul class="stats">
+                    <li><strong>500+</strong> Photos</li>
+                    <li><strong>50+</strong> Videos</li>
+                    <li><strong>Daily</strong> Updates</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="content" class="content-platform">
+    <section id="content" class="section content-section bg-darker">
         <div class="container">
-            <h2 class="section-title centered">Premium Content</h2>
-            <p class="section-subtitle centered">Choose your tier of access and unlock exclusive sets.</p>
+            <div class="section-header centered">
+                <h2 class="section-title">Premium <span class="text-pink">Collections</span></h2>
+                <p class="subtitle">Choose your tier and unlock exclusive access to my most divine content.</p>
+            </div>
             
             <div class="content-grid">
-                <div class="content-card">
-                    <div class="card-preview">
+                <!-- Tier 1 -->
+                <div class="tier-card">
+                    <div class="card-image">
                         <img src="https://placehold.co/400x500/1a1a1a/ff1493?text=Starter+Set" alt="Starter Angel Set">
-                        <div class="card-tier">Tier 1</div>
+                        <span class="tier-label">TIER 1</span>
                     </div>
                     <div class="card-body">
                         <h3>Starter Angel Set</h3>
-                        <p>A curated collection of 10 high-resolution photos showcasing my favorite arches.</p>
+                        <p>A curated introduction to my arches. Includes 10 high-resolution photos perfect for new fans.</p>
                         <div class="card-footer">
                             <span class="price">$115</span>
-                            <a href="https://buy.stripe.com/14A00jcVR7lM6Pl2r5eIw05" class="card-btn">Unlock Now</a>
+                            <a href="https://buy.stripe.com/14A00jcVR7lM6Pl2r5eIw05" class="btn btn-pink btn-full">UNLOCK NOW</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="content-card featured">
-                    <div class="card-preview">
+                <!-- Featured Tier -->
+                <div class="tier-card featured">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <div class="card-image">
                         <img src="https://placehold.co/400x500/1a1a1a/ff1493?text=Golden+Arch" alt="Golden Arch Collection">
-                        <div class="card-tier">Most Popular</div>
+                        <span class="tier-label">PREMIUM</span>
                     </div>
                     <div class="card-body">
                         <h3>Golden Arch Collection</h3>
-                        <p>The ultimate set. 25 exclusive photos plus 2 high-definition video clips of my divine arches.</p>
+                        <p>The ultimate experience. 25 exclusive high-res photos plus 2 high-definition video clips.</p>
                         <div class="card-footer">
                             <span class="price">$135</span>
-                            <a href="https://buy.stripe.com/14A5kDf3Z5dEflR1n1eIw06" class="card-btn">Unlock Now</a>
+                            <a href="https://buy.stripe.com/14A5kDf3Z5dEflR1n1eIw06" class="btn btn-pink btn-full">UNLOCK NOW</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="content-card">
-                    <div class="card-preview">
-                        <img src="https://placehold.co/400x500/1a1a1a/ff1493?text=Full+Access" alt="FeetFinder Subscription">
-                        <div class="card-tier">Full Access</div>
+                <!-- Subscription -->
+                <div class="tier-card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/400x500/1a1a1a/ff1493?text=Full+Access" alt="Full Access">
+                        <span class="tier-label">MONTHLY</span>
                     </div>
                     <div class="card-body">
                         <h3>FeetFinder Membership</h3>
-                        <p>Subscribe monthly for daily posts, custom request priority, and direct messaging access.</p>
+                        <p>Join my primary platform for daily posts, direct messaging, and custom request priority.</p>
                         <div class="card-footer">
-                            <span class="price">Varies</span>
-                            <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="card-btn">Join on FF</a>
+                            <span class="price">VARIES</span>
+                            <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="btn btn-pink btn-full">JOIN ON FF</a>
                         </div>
                     </div>
                 </div>
@@ -129,62 +127,65 @@
         </div>
     </section>
 
-    <section class="tribute-section">
-        <div class="container">
-            <h2 class="section-title centered">Support the Angel</h2>
-            <div class="tribute-options">
+    <section class="section tribute-section">
+        <div class="container centered">
+            <h2 class="section-title">Support The <span class="text-pink">Angel</span></h2>
+            <p class="subtitle">Show your appreciation with a direct tribute.</p>
+            <div class="tribute-grid">
                 <a href="https://buy.stripe.com/bJe00j8FB35wddJc1FeIw00" class="tribute-btn">
-                    <span class="icon">☕</span> $5 Coffee Fund
+                    <span class="icon">☕</span>
+                    <span class="label">$5 Coffee Fund</span>
                 </a>
                 <a href="https://buy.stripe.com/28EbJ1bRN0Xoa1x6HleIw01" class="tribute-btn">
-                    <span class="icon">💅</span> $20 Pedicure Fund
+                    <span class="icon">💅</span>
+                    <span class="label">$20 Pedicure Fund</span>
                 </a>
                 <a href="https://buy.stripe.com/14A00j1d97lMc9F6HleIw02" class="tribute-btn">
-                    <span class="icon">👼</span> $50 Angel Wings
+                    <span class="icon">👼</span>
+                    <span class="label">$50 Angel Wings</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="gallery" class="gallery-preview">
+    <section id="gallery" class="section gallery-section bg-darker">
         <div class="container">
-             <h2 class="section-title centered">Sneak Peek</h2>
-             <div class="masonry-gallery">
-                 <div class="gallery-item"><img src="https://placehold.co/300x400/1a1a1a/ff1493?text=Preview+1" alt="Preview"></div>
-                 <div class="gallery-item"><img src="https://placehold.co/300x300/1a1a1a/ff1493?text=Preview+2" alt="Preview"></div>
-                 <div class="gallery-item"><img src="https://placehold.co/300x500/1a1a1a/ff1493?text=Preview+3" alt="Preview"></div>
-                 <div class="gallery-item"><img src="https://placehold.co/300x400/1a1a1a/ff1493?text=Preview+4" alt="Preview"></div>
-                 <div class="gallery-item"><img src="https://placehold.co/300x350/1a1a1a/ff1493?text=Preview+5" alt="Preview"></div>
-                 <div class="gallery-item"><img src="https://placehold.co/300x300/1a1a1a/ff1493?text=Preview+6" alt="Preview"></div>
-             </div>
-             <div class="gallery-cta centered">
-                 <p>Want to see the full, uncensored gallery?</p>
-                 <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="primary-btn">Get Full Access</a>
-             </div>
+            <div class="section-header centered">
+                <h2 class="section-title">Sneak <span class="text-pink">Peek</span></h2>
+                <p class="subtitle">A glimpse into the divine world of Arch Angels.</p>
+            </div>
+            <div class="masonry-gallery">
+                <div class="gallery-item"><img src="https://placehold.co/400x500/1a1a1a/ff1493?text=Preview+1" alt="Preview"></div>
+                <div class="gallery-item"><img src="https://placehold.co/400x400/1a1a1a/ff1493?text=Preview+2" alt="Preview"></div>
+                <div class="gallery-item"><img src="https://placehold.co/400x600/1a1a1a/ff1493?text=Preview+3" alt="Preview"></div>
+                <div class="gallery-item"><img src="https://placehold.co/400x400/1a1a1a/ff1493?text=Preview+4" alt="Preview"></div>
+            </div>
+            <div class="centered mt-4">
+                <a href="http://app.feetfinder.com/userProfile/AshxAvery" class="btn btn-outline">VIEW FULL GALLERY</a>
+            </div>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
+    <section id="contact" class="section contact-section">
         <div class="container">
             <div class="contact-card">
-                <h2 class="section-title">Get in Touch</h2>
-                <p>For custom content requests, collaborations, or business inquiries, reach out directly via email.</p>
+                <h2 class="section-title">Get In <span class="text-pink">Touch</span></h2>
+                <p>For custom requests, business inquiries, or collaborations, reach out directly.</p>
                 <a href="mailto:contact.ash.avery@gmail.com" class="email-link">contact.ash.avery@gmail.com</a>
-                
                 <div class="social-links">
-                    <a href="https://x.com/ashaveryxx?s=11" target="_blank">Twitter / X</a>
-                    <a href="https://www.reddit.com/u/ashaveryxx/s/5GxZj953Wm" target="_blank">Reddit</a>
-                    <a href="https://funwithfeet.com/seller/Ash-Averys-Beautiful-Feet" target="_blank">FunWithFeet</a>
+                    <a href="https://x.com/ashaveryxx?s=11">TWITTER</a>
+                    <a href="https://www.reddit.com/u/ashaveryxx/s/5GxZj953Wm">REDDIT</a>
+                    <a href="https://funwithfeet.com/seller/Ash-Averys-Beautiful-Feet">FUNWITHFEET</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Arch Angels</div>
-                <p class="disclaimer">18+ Only. Content is intended for adults. All rights reserved &copy; 2026 Ash Avery.</p>
+                <p>&copy; 2026 ASH AVERY'S ARCH ANGELS. ALL RIGHTS RESERVED.</p>
+                <p class="disclaimer">18+ ONLY. CONTENT IS INTENDED FOR ADULTS.</p>
             </div>
         </div>
     </footer>
